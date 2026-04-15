@@ -24,8 +24,6 @@ def fetch_tweets() -> list:
 
     client = ApifyClient(token)
     
-    # We will use 'apidojo/tweet-scraper' as it's the most robust free scraper on Apify.
-    # Note: Apify uses search parameters. Feel free to adjust searchTerms below.
     run_input = {
         "searchTerms": ["#AI", "ChatGPT", "Sam Altman", "Anthropic", "Claude"],
         "maxItems": 20,
